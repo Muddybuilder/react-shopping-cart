@@ -1,12 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
-export function App() {
+export default function App() {
   return (
     <>
-      <h1>Hello</h1>
-      <Link to="/home">Home</Link>
-      <Link to="/shop">Shop</Link>
-      {<Outlet />}
+      <Header />
+      <Outlet />
     </>
   );
 }

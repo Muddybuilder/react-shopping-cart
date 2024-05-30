@@ -1,0 +1,48 @@
+/* .navi {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+button {
+  border-width: 0;
+  background-color: transparent;
+}
+
+.navi {
+  height: 50px;
+  background-color: #333;
+}
+
+/* Remove bullets, margin and padding */
+.navi ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  height: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navi li {
+  float: left; /* Or you can use display: inline; */
+}
+
+/* Define the block styling for the links */
+.navi li a {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+/* This is optional, however if you want to display the 
+  active link differently apply a background to it */
+.navi li a.active {
+  background-color: #3786e1;
+}

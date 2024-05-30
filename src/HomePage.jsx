@@ -1,4 +1,4 @@
-export function HomePage() {
+export default function HomePage() {
   return (
     <>
       <p>This is home!</p>
