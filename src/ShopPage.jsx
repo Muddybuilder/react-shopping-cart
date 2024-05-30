@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import "./ShopPage.css";
 const useFakeProductURL = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -27,7 +27,7 @@ export default function ShopPage() {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <>
+    <ul className="product-list">
       {products.map((item) => {
         return (
           <li key={item.id}>
@@ -36,6 +36,6 @@ export default function ShopPage() {
           </li>
         );
       })}
-    </>
+    </ul>
   );
 }
