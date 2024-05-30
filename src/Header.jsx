@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import cartImg from "./assets/shopping-cart.svg";
 
 export default function Header() {
   return (
@@ -13,7 +14,7 @@ export default function Header() {
         </li>
         <li>
           <button>
-            <img src="./src/assets/shopping-cart.svg" alt="Shopping Cart" />
+            <img src={cartImg} alt="Shopping Cart" />
           </button>
         </li>
       </ul>
