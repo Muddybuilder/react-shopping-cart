@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import cartImg from "./assets/shopping-cart.svg";
 
-export default function Header() {
+export default function Header(cartItems) {
   return (
     <nav className="navi">
       <ul>

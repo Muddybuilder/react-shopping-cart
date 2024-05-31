@@ -3,11 +3,11 @@ import Header from "./Header";
 import { Outlet } from "react-router-dom";
 
 export default function App() {
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   //TODO: Propagate cartItem, setCartItem to children components
   return (
     <>
-      <Header />
+      <Header cartItems={cartItems} />
       <Outlet />
     </>
   );
