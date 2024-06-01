@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./ShopPage.css";
+import Card from "./Card";
+import { useOutletContext } from "react-router-dom";
 const useFakeProductURL = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -21,35 +23,9 @@ const useFakeProductURL = () => {
   return { products, error, loading };
 };
 
-function Card({ item }) {
-  const [number, setNumber] = useState(0);
-
-  return (
-    <div className="card">
-      <img src={item.image} height="150px" width="150px"></img>
-      {item.title}
-      <button
-        type="button"
-        onClick={() => setNumber(number > 0 ? number - 1 : 0)}
-      >
-        -
-      </button>
-      <input
-        type="number"
-        min={0}
-        value={number.toString()}
-        onChange={(e) => setNumber(+e.target.value)}
-      ></input>
-      <button type="button" onClick={() => setNumber(number + 1)}>
-        +
-      </button>
-      <button type="button">Add to Cart</button>
-    </div>
-  );
-}
-
 export default function ShopPage() {
   const { products, error, loading } = useFakeProductURL();
+  const [cartItems, setCartItems] = useOutletContext();
   if (loading) return <p>Loading...</p>;
   if (error) return <p>A network error was encountered</p>;
 
@@ -58,7 +34,11 @@ export default function ShopPage() {
       {products.map((item) => {
         return (
           <li key={item.id}>
-            <Card item={item} />
+            <Card
+              item={item}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
           </li>
         );
       })}

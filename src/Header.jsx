@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import cartImg from "./assets/shopping-cart.svg";
 
-export default function Header(cartItems) {
+export default function Header({ cartItems }) {
   return (
     <nav className="navi">
       <ul>
@@ -14,6 +14,7 @@ export default function Header(cartItems) {
         </li>
         <li>
           <button>
+            <span>{cartItems.length}</span>
             <img src={cartImg} alt="Shopping Cart" />
           </button>
         </li>

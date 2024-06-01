@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    gap: 5px;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+}
+
+input{
+    width: 20px;
+}
+.product-img{
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+}
+
+.product-select {
+    display: flex;
+    gap: 5px;
+}

@@ -8,7 +8,7 @@ export default function App() {
   return (
     <>
       <Header cartItems={cartItems} />
-      <Outlet />
+      <Outlet context={[cartItems, setCartItems]} />
     </>
   );
 }

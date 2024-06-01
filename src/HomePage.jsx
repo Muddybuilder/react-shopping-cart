@@ -1,7 +1,11 @@
+import "./HomePage.css";
+import cargoShipImg from "../public/cargoship.jpg";
 export default function HomePage() {
   return (
-    <>
-      <p>This is home!</p>
-    </>
+    <div className="home-page">
+      <img className="cargo-bg" src={cargoShipImg} alt="Cargo Ship"></img>
+      <h1>A Journey to you</h1>
+      <p>Easier than ever, order now!</p>
+    </div>
   );
 }
