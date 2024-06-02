@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import HomePage from "./HomePage";
 import ShopPage from "./ShopPage";
+import Cart from "./Cart";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <ShopPage />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
       },
     ],
   },

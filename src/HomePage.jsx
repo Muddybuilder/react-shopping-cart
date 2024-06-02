@@ -1,5 +1,5 @@
 import "./HomePage.css";
-import cargoShipImg from "../public/cargoship.jpg";
+import cargoShipImg from "/cargoship.jpg";
 export default function HomePage() {
   return (
     <div className="home-page">

@@ -30,9 +30,8 @@ export default function Card({ item, cartItems, setCartItems }) {
           <button
             type="button"
             onClick={() => {
-              // TODO: Check 0, same item already in cart
+              number ? setCartItems([...cartItems, item]) : null;
               setNumber(0);
-              setCartItems([...cartItems, item]);
             }}
           >
             Add to Cart

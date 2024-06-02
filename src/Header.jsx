@@ -15,7 +15,9 @@ export default function Header({ cartItems }) {
         <li>
           <button>
             <span>{cartItems.length}</span>
-            <img src={cartImg} alt="Shopping Cart" />
+            <Link to="/cart">
+              <img src={cartImg} alt="Shopping Cart" />
+            </Link>
           </button>
         </li>
       </ul>
