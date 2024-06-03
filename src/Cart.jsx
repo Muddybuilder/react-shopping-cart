@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import "./Cart.css";
 
 export default function Cart() {
@@ -47,14 +47,14 @@ export default function Cart() {
             setCartItems([]);
           }}
         >
-          Checkout
+          <Link to="/home">Checkout</Link>
         </button>
         <button
           onClick={() => {
             setCartItems([]);
           }}
         >
-          Cancel
+          <Link to="/home">Cancel</Link>
         </button>
       </div>
     </div>

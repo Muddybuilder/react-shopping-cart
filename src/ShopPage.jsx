@@ -30,18 +30,17 @@ export default function ShopPage() {
   if (error) return <p>A network error was encountered</p>;
 
   return (
-    <ul className="product-list">
+    <div className="product-list">
       {products.map((item) => {
         return (
-          <li key={item.id}>
-            <Card
-              item={item}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-            />
-          </li>
+          <Card
+            key={item.id}
+            item={item}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          />
         );
       })}
-    </ul>
+    </div>
   );
 }
