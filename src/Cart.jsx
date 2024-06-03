@@ -3,12 +3,10 @@ import "./Cart.css";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useOutletContext();
-  let totalPrice = 0;
 
   return (
     <div className="cart-container">
       {cartItems.map(({ item, number }) => {
-        totalPrice = totalPrice * item.price * number;
         return (
           <div key={item.title} className="cart-item">
             <div>
@@ -32,11 +30,13 @@ export default function Cart() {
         <div>
           <h3>
             Total: $
-            {cartItems.reduce((accumulator, currentValue) => {
-              return (
-                accumulator + currentValue.item.price * currentValue.number
-              );
-            }, 0)}
+            {cartItems
+              .reduce((accumulator, currentValue) => {
+                return (
+                  accumulator + currentValue.item.price * currentValue.number
+                );
+              }, 0)
+              .toFixed(2)}
           </h3>
         </div>
         <button
