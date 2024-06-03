@@ -9,6 +9,7 @@ export default function Card({ item, cartItems, setCartItems }) {
       <img className="product-img" src={item.image}></img>
       <div className="text-container">
         <p>{item.title}</p>
+        <p>${item.price}</p>
         <div className="button-container">
           <div className="product-select">
             <button
@@ -30,7 +31,17 @@ export default function Card({ item, cartItems, setCartItems }) {
           <button
             type="button"
             onClick={() => {
-              number ? setCartItems([...cartItems, item]) : null;
+              let newArr = [...cartItems];
+              if (number) {
+                const idx = newArr.map((e) => e.item.id).indexOf(item.id);
+                if (idx !== -1) {
+                  newArr[idx].number += number;
+                } else {
+                  newArr.push({ item: item, number: number });
+                }
+                setCartItems(newArr);
+              }
+
               setNumber(0);
             }}
           >

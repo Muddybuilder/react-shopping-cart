@@ -1,0 +1,23 @@
+.cart-container {
+  align-self: center;
+  width: min(90%, 800px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 10px;
+}
+.cart-item {
+  text-align: right;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.cart-item > div {
+  flex: 1;
+}
+
+.cart-checkout {
+  flex: 1;
+  text-align: right;
+}
